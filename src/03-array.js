@@ -14,7 +14,11 @@
  * console.log(numbers); // [5]
  */
 function returnNumbers(start, finish) {
-
+    let arrayOfNumbers = []
+    for (let i=start; i <= finish; i++){
+            arrayOfNumbers.push(i)
+        }
+    return arrayOfNumbers
 }
 
 
@@ -30,7 +34,8 @@ function returnNumbers(start, finish) {
  */
 
 function sumArray(array) {
-
+    const sumOfArray = array.reduce((a, b) => a + b)
+    return sumOfArray
 }
 
 /**
@@ -45,5 +50,9 @@ function sumArray(array) {
  * const updatedArray = pushElement(myArray, 4); // updatedArray will be [1, 2, 3, 4]
  */
 function pushElement(arr, elem) {
-    
+    arr.push(elem)
+    return arr
 }
+const myArray = [1, 2, 3]
+pushElement(myArray, 4)
+console.log(myArray)
